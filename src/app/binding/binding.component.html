@@ -1,14 +1,29 @@
 <div class="binding">
   <section class="string-interpolation">
-    <h4>String interpolation</h4>
+    <h4 class="demonstration-title">String interpolation</h4>
     <div class="demonstration">
       {{getName()}}
     </div>
   </section>
   <section class="property-binding">
-    <h4>Property Binding</h4>
+    <h4 class="demonstration-title">Property Binding</h4>
     <div class="demonstration">
-      hi!
+      <input type="text" [value]="getName()">
+    </div>
+  </section>
+  <section class="event-binding">
+    <h4 class="demonstration-title">Event Binding</h4>
+    <div class="demonstration">
+      <p>{{toggleText}}</p>
+      <button class="event-button" (click)="buttonClick($event)">Click Me!</button>
+    </div>
+  </section>
+  <section class="two-way-binding">
+    <h4 class="demonstration-title">Two-Way Binding</h4>
+    <div class="demonstration">
+      <p>{{twoBind}}</p>
+      <label for="twoBind">Two Bind: </label>
+      <input type="text" id="twoBind" [(ngModel)]="twoBind">
     </div>
   </section>
 </div>
